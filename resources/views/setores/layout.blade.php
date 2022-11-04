@@ -13,16 +13,16 @@
   </head>
   <body class="d-flex flex-column h-100 bg-white">
     
-    <header class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <div class="col-md-3 text-center">
         <img src="{{ asset('images/logo.png') }}" width="280" class="img-fluid" alt="Hsist">
       </div>
       <div class="col-md-9">&nbsp;</div>
-    </header>
+    </nav>
     
     <div class="container">
       @yield('content')
     </div>
-
+    
   </body>
 </html>
