@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Http\Response;
+
 use DB;
 
 class SenhaController extends Controller
@@ -64,8 +66,7 @@ class SenhaController extends Controller
                 // Atualiza para chamada
                 $alter = DB::table('senhas')
                     ->where('id', $senha->id)
-                    ->update(['guiche' => $json->guiche])
-                    ->update(['datcha' => date('Y-m-d H:i:s')]);
+                    ->update(['datcha' => date('Y-m-d H:i:s'), 'guiche' => $json->guiche]);
                 // Retorna a senha chamada 
                 return response()->json(["id" => 1, "senha" => $senha->codigo]);
             } else {
